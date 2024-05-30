@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Loan Prediction Result</h2>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Prediction Summary</h5>
+                <p class="card-text">
+                    <strong>Loan Default Prediction:</strong> {% if default_prediction == 1 %} Yes {% else %} No {% endif %}
+                </p>
+                <p class="card-text">
+                    <strong>Recommended Loan Amount:</strong> {{ loan_amount_prediction }}
+                </p>
+                <hr>
+                <h5 class="card-title">Input Data</h5>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Age:</strong> {{ input_data.0 }}</li>
+                    <li class="list-group-item"><strong>Income:</strong> {{ input_data.1 }}</li>
+                    <li class="list-group-item"><strong>Home Ownership:</strong> {{ input_data.2 }}</li>
+                    <li class="list-group-item"><strong>Employment Length:</strong> {{ input_data.3 }}</li>
+                    <li class="list-group-item"><strong>Loan Intent:</strong> {{ input_data.4 }}</li>
+                    <li class="list-group-item"><strong>Loan Grade:</strong> {{ input_data.5 }}</li>
+                    <li class="list-group-item"><strong>Loan Amount:</strong> {{ input_data.6 }}</li>
+                    <li class="list-group-item"><strong>Interest Rate:</strong> {{ input_data.7 }}</li>
+                    <li class="list-group-item"><strong>Loan Percent Income:</strong> {{ input_data.8 }}</li>
+                    <li class="list-group-item"><strong>Credit Bureau Default on File:</strong> {{ input_data.9 }}</li>
+                    <li class="list-group-item"><strong>Credit History Length:</strong> {{ input_data.10 }}</li>
+                </ul>
+                <a href="/home/" class="btn btn-primary mt-3">Make Another Prediction</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Loan Prediction Result</h2>
+        <div class="alert alert-info mt-3">
+            <p><strong>Loan Default Prediction:</strong> {% if default_prediction == 0 %}Non-Default{% else %}Default{% endif %}</p>
+            <p><strong>Recommended Loan Amount:</strong> {{ loan_amount_prediction }}</p>
+        </div>
+        <a href="{% url 'index' %}" class="btn btn-primary mt-3">Go Back</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
